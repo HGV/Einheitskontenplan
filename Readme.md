@@ -1,3 +1,7 @@
+---
+title: Einheitskontenplan 2.0
+---
+
 # HGV-Schnittstelle für den Einheitskontenplan (EKP)
 
 ## Wie erfolgt die Übertragung?
