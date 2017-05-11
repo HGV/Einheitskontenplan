@@ -1,6 +1,6 @@
 ---
 title: Einheitskontenplan
-permalink: /
+permalink:
 ---
 
 # HGV-Schnittstelle für den Einheitskontenplan (EKP)
