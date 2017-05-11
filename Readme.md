@@ -1,6 +1,6 @@
 ---
-permalink:
 title: HGV-Schnittstelle für den Einheitskontenplan (EKP)
+permalink:
 ---
 
 ## Wie erfolgt die Übertragung?
