@@ -1,9 +1,3 @@
----
-project_name: Einheitskontenplan
-title: Einheitskontenplan
-permalink:
----
-
 # HGV-Schnittstelle für den Einheitskontenplan (EKP)
 
 ## Wie erfolgt die Übertragung?
