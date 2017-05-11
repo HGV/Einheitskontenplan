@@ -1,5 +1,5 @@
 ---
-project-name: Einheitskontenplan
+project_name: Einheitskontenplan
 title: Einheitskontenplan
 permalink:
 ---
