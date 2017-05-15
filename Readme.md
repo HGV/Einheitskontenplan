@@ -5,13 +5,13 @@ permalink: /
 
 #  HGV-Schnittstelle für den Einheitskontenplan (EKP)
 
-## Wie erfolgt die Übertragung?
+## Wie erfolgt die Datenpflege
 
-Es gibt drei verschiedene Endpunkte der Datenübertragung:
+Der Einheitskontenplan unterteilt sich in folgende drei Bereiche:
 
 1. Stammdaten
-1. Buchhaltungsdaten (EKP)
 1. Monatsdaten
+1. Buchhaltungsdaten (der eigentliche EKP)
 
 ### Pflege der Stammdaten
 
@@ -33,8 +33,9 @@ Da sich diese Angaben (vor allem Nächtigungen und Offenhaltetage) laufend ände
 
 Buchhaltungsdaten werden im [CSV-Format](https://de.wikipedia.org/wiki/CSV_%28Dateiformat%29) übertragen.   
 
-> Das Trennzeichen ist ein Semikolon (`;`)
-> Die Encodierung ist `UTF8`
+1. Das Trennzeichen ist ein Semikolon (`;`)
+1. Die Encodierung ist `UTF8`, damit Sonderzeichen korrekt übertragen werden.  
+   Achtung! Diese Encodierung ist nicht das standardmäßig von Excel verwendete Format, ist jedoch das im Web gängigere und portablere Format.
 
 ## Definition der Monatsdaten
 
