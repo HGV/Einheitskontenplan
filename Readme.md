@@ -11,7 +11,7 @@ Die Pflege des Einheitskontenplanes unterteilt sich in folgende drei Bereiche:
 
 1. [Pflege der Stammdaten](#pflege-der-stammdaten)
 1. [Pflege der Monatsdaten](#pflege-der-monatsdaten)
-1. [Übertragung der Buchhaltungsdaten (der eigentliche EKP)](#pflege-der-buchhaltungsdaten)
+1. [Pflege der Buchhaltungsdaten (der eigentliche EKP)](#pflege-der-buchhaltungsdaten)
 
 ### Pflege der Stammdaten
 
