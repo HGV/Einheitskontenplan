@@ -27,11 +27,39 @@ Unter Monatsdaten verstehen sich Angaben zu den Betten, Nächtigungen, Offenhalt
 
 Die Monatsdaten werden über eine Weboberfläche gepflegt.
 
-Da sich diese Angaben (vor allem Nächtigungen und Offenhaltetage) laufend ändern ist alternativ ist ein automatischer periodischer Import als CSV-Date möglich um die manuelle Pflege so gering wie möglich zu halten.
+Da sich diese Angaben (vor allem Nächtigungen und Offenhaltetage) laufend ändern ist alternativ ist ein automatischer periodischer Import als CSV-Datei möglich um die manuelle Pflege so gering wie möglich zu halten. Diese Schnittstelle wird im Detail weiter unten erklärt.
 
 ### Pflege der Buchhaltungsdaten
 
-> Die Daten werden über eine Schnittstelle übertragen. Diese Schnittstelle wird im Detail weiter unten erklärt.
+Die Daten werden im CSV-Format über eine Schnittstelle übertragen. Diese Schnittstelle wird im Detail nachfolgend unten erklärt.
+
+## Schnittstelle zum HGV
+
+Der Datenupload der CSV-Dateien erfolgt über eine gesicherte Webschnittstelle.  
+Dia Authentisierung erfolgt über OAuth2.  
+Nur vom HGV zertifizierte Partner dürfen die Daten an diese Webschnittstelle schicken.
+
+#### Daten welche über die Schnittstelle gepflegt werden, werden im [CSV-Format](https://de.wikipedia.org/wiki/CSV_%28Dateiformat%29) übertragen.
+
+1. Zur Zeichenkodierung wird `UTF-8` verwendet, damit Sonderzeichen korrekt übertragen werden.  
+   **Achtung!** Diese Encodierung ist nicht das standardmäßig von Excel verwendete Format, ist jedoch das im Web gängigere und portablere Format.
+1. Zeilenumbrüche werden mittels `CRLF` angegeben.
+1. Das Trennzeichen ist ein Semikolon (`;`)
+1. Falls der Text einer Spalte ein Semikolon oder einen Zeilenumbruch beinhaltet ist dieser Text mit doppelten Anführungszeichen (`"`) zu umschließen.
+1. Falls der Text einer Spalte ein Anführungszeichen (ausgenommen sind die beiden umschließenden Anführungszeichen) beinhaltet ist diesem Anführungszeichen ein "Backslash" `\` voranzustellen.
+
+### Servicebeschreibung
+
+Die CSV-Datei wird an den Endpunkt `/ekp` per `POST` geschickt.
+Content-Type ist `text/csv`
+
+* Bei **erfolgreichem Import** gibt die Schnittstelle den HTTP-Status Code `201 Created` zurück.
+* Ist das **CSV-Format fehlerhaft** oder liegt ein sonstiger Fehler im übertragenen Dokument vor git die Schnittstelle den Status Code `400 Bad Request` zurück. Im Body steht die Ursache, wieso die Übertragung nicht erfolgreich war.
+* War der Import **aufgrund eines Fehlers beim HGV** nicht erfolgreich gibt die Schnittstelle den Status Code `500 Internal Server Error` zurück. Im Body steht die Fehlerursache.
+
+Es ist zu beachten dass die Übertragung einige Zeit dauern kann, sei es aufgrund dessen, dass die CSV-Datei sehr groß sein kann (bei einer Übertragung mehrerer Betriebe) oder aber der Import der Daten beim HGV länger dauert, da Sanitätschecks gemacht werden müssen und die Daten zusammengeführt werden müssen.
+
+> Eine Überlegung ist eine alternative Schnittstelle zu schaffen, bei welcher die Daten vom HGV abgeholt werden (FTP, SCP, HTTP). Bei erfolgreichem Import werden die Daten anschließend gelöscht.
 
 ## Definition der Monatsdaten
 
@@ -90,30 +118,3 @@ SenderID;CompanyID;Year;Month;Account;Value
 
 
 
-## Schnittstelle zum HGV
-
-Der Datenupload der CSV-Dateien erfolgt über eine gesicherte Webschnittstelle.  
-Dia Authentisierung erfolgt über OAuth2.  
-Nur vom HGV zertifizierte Partner dürfen die Daten an diese Webschnittstelle schicken.
-
-#### Daten welche über die Schnittstelle gepflegt werden, werden im [CSV-Format](https://de.wikipedia.org/wiki/CSV_%28Dateiformat%29) übertragen.
-
-1. Zur Zeichenkodierung wird `UTF-8` verwendet, damit Sonderzeichen korrekt übertragen werden.  
-   Achtung! Diese Encodierung ist nicht das standardmäßig von Excel verwendete Format, ist jedoch das im Web gängigere und portablere Format.
-1. Zeilenumbrüche werden mittels `CRLF` angegeben.
-1. Das Trennzeichen ist ein Semikolon (`;`)
-1. Falls der Text einer Spalte ein Semikolon oder einen Zeilenumbruch beinhaltet ist dieser Text mit doppelten Anführungszeichen (`"`) zu umschließen.
-1. Falls der Text einer Spalte ein Anführungszeichen (ausgenommen sind die beiden umschließenden Anführungszeichen) beinhaltet ist diesem Anführungszeichen ein "Backslash" `\` voranzustellen.
-
-### EKP
-
-Die CSV-Datei wird an den enpunkt `/ekp` per `POST` geschickt.
-Content-Type ist `text/csv`
-
-* Bei **erfolgreichem Import** gibt die Schnittstelle den HTTP-Status Code `201 Created` zurück.
-* Ist das **CSV-Format fehlerhaft** oder liegt ein sonstiger Fehler im übertragenen Dokument vor git die Schnittstelle den Status Code `400 Bad Request` zurück. Im Body steht die Ursache, wieso die Übertragung nicht erfolgreich war.
-* War der Import **aufgrund eines Fehlers beim HGV** nicht erfolgreich gibt die Schnittstelle den Status Code `500 Internal Server Error` zurück. Im Body steht die Fehlerursache.
-
-Es ist zu beachten dass die Übertragung einige Zeit dauern kann, sei es aufgrund dessen, dass die CSV-Datei sehr groß sein kann (bei einer Übertragung mehrerer Betriebe) oder aber der Import der Daten beim HGV länger dauert, da Sanitätschecks gemacht werden müssen und die Daten zusammengeführt werden müssen.
-
-> Eine Überlegung ist eine alternative Schnittstelle zu schaffen, bei welcher die Daten vom HGV abgeholt werden (FTP, SCP, HTTP). Bei erfolgreichem Import werden die Daten einfach gelöscht.
