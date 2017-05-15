@@ -31,7 +31,7 @@ Da sich diese Angaben (vor allem Nächtigungen und Offenhaltetage) laufend ände
 
 ### Pflege der Buchhaltungsdaten
 
-Diese Daten werden über eine Schnittstelle übertragen. Diese Schnittstelle wird weiter unten erklärt.
+> Die Daten werden über eine Schnittstelle übertragen. Diese Schnittstelle wird im Detail weiter unten erklärt.
 
 ## Definition der Monatsdaten
 
