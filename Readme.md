@@ -31,12 +31,12 @@ Da sich diese Angaben (vor allem Nächtigungen und Offenhaltetage) laufend ände
 
 ### Pflege der Buchhaltungsdaten
 
-Die Daten werden im CSV-Format über eine Schnittstelle übertragen. Diese Schnittstelle wird im Detail nachfolgend unten erklärt.
+Die Daten werden im CSV-Format über eine Schnittstelle übertragen. Diese Schnittstelle wird im Detail nachfolgend erklärt.
 
 ## Schnittstelle zum HGV
 
-Der Datenupload der CSV-Dateien erfolgt über eine gesicherte Webschnittstelle.  
-Dia Authentisierung erfolgt über OAuth2.  
+Der Datenupload der CSV-Dateien erfolgt über eine gesicherte `HTTPS`-Webschnittstelle.  
+Dia Authentisierung erfolgt über [Basic-Authentication](https://de.wikipedia.org/wiki/HTTP-Authentifizierung#Basic_Authentication).  
 Nur vom HGV zertifizierte Partner dürfen die Daten an diese Webschnittstelle schicken.
 
 #### Daten welche über die Schnittstelle gepflegt werden, werden im [CSV-Format](https://de.wikipedia.org/wiki/CSV_%28Dateiformat%29) übertragen.
@@ -57,7 +57,7 @@ Content-Type ist `text/csv`
 * Ist das **CSV-Format fehlerhaft** oder liegt ein sonstiger Fehler im übertragenen Dokument vor git die Schnittstelle den Status Code `400 Bad Request` zurück. Im Body steht die Ursache, wieso die Übertragung nicht erfolgreich war.
 * War der Import **aufgrund eines Fehlers beim HGV** nicht erfolgreich gibt die Schnittstelle den Status Code `500 Internal Server Error` zurück. Im Body steht die Fehlerursache.
 
-Es ist zu beachten dass die Übertragung einige Zeit dauern kann, sei es aufgrund dessen, dass die CSV-Datei sehr groß sein kann (bei einer Übertragung mehrerer Betriebe) oder aber der Import der Daten beim HGV länger dauert, da Sanitätschecks gemacht werden müssen und die Daten zusammengeführt werden müssen.
+Es ist zu beachten dass die Übertragung einige Zeit dauern kann, sei es aufgrund dessen, dass die CSV-Datei sehr groß sein kann (bei Übertragung mehrerer Betriebe/Monate) oder aber der Import der Daten beim HGV länger dauert, da Sanitätschecks gemacht werden und die Daten mit bestehenden Daten zusammengeführt werden müssen.
 
 > Eine Überlegung ist eine alternative Schnittstelle zu schaffen, bei welcher die Daten vom HGV abgeholt werden (FTP, SCP, HTTP). Bei erfolgreichem Import werden die Daten anschließend gelöscht.
 
