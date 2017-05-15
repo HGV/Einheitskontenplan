@@ -50,10 +50,10 @@ Nur vom HGV zertifizierte Partner dürfen die Daten an diese Webschnittstelle sc
 
 ### Servicebeschreibung
 
-Die CSV-Datei wird an den Endpunkt `/ekp` per `POST` geschickt.
+Die CSV-Datei wird an den Endpunkt `/ekp` per HTTP-`POST` geschickt.
 
-1. Für die Monatsdaten ist der Endpunkt: `/ekp/monthlyData`
-2. Für die Buchhaltungsdaten lautet der Endpunkt: `/ekp/accounting`
+1. Die Monatsdaten werden an folgenden Endpunkt gesendet: `/ekp/monthlyData`
+2. Die Buchhaltungsdaten werden an folgenden Endpunkt gesendet: `/ekp/accounting`
 
 Content-Type ist `text/csv`
 
