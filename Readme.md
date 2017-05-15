@@ -27,11 +27,11 @@ Unter Monatsdaten verstehen sich Angaben zu den Betten, Nächtigungen, Offenhalt
 
 Die Monatsdaten werden über eine Weboberfläche gepflegt.
 
-Da sich diese Angaben (vor allem Nächtigungen und Offenhaltetage) laufend ändern ist alternativ ein automatischer periodischer Import als CSV-Datei möglich um die manuelle Pflege so gering wie möglich zu halten. Diese Schnittstelle wird im Detail weiter unten erklärt.
+Da sich diese Angaben (vor allem Nächtigungen und Offenhaltetage) laufend ändern ist alternativ ein automatischer periodischer Import als CSV-Datei über die [HGV-Schnittstelle](#schnittstelle-zum-hgv) möglich um die manuelle Pflege so gering wie möglich zu halten.
 
 ### Pflege der Buchhaltungsdaten
 
-Die Daten werden im CSV-Format über die HGV-Schnittstelle übertragen. Diese Schnittstelle wird im Detail nachfolgend erklärt.
+Die Daten werden im CSV-Format über die [HGV-Schnittstelle](#schnittstelle-zum-hgv) übertragen.
 
 ## Schnittstelle zum HGV
 
