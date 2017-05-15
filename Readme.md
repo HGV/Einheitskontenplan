@@ -42,7 +42,7 @@ Nur vom HGV zertifizierte Partner dürfen die Daten an diese Webschnittstelle sc
 #### Daten welche über die Schnittstelle gepflegt werden, werden im [CSV-Format](https://de.wikipedia.org/wiki/CSV_%28Dateiformat%29) übertragen.
 
 1. Zur Zeichenkodierung wird `UTF-8` verwendet, damit Sonderzeichen korrekt übertragen werden.  
-   **Achtung!** Diese Encodierung ist nicht das standardmäßig von Excel verwendete Format, ist jedoch das im Web gängigere und portablere Format.
+   **Achtung!** Diese Zeichenkodierung ist nicht das standardmäßig von Excel verwendete Format, ist jedoch das im Web gängigere und portablere Format.
 1. Zeilenumbrüche werden mittels `CRLF` angegeben.
 1. Das Trennzeichen ist ein Semikolon (`;`)
 1. Falls der Text einer Spalte ein Semikolon oder einen Zeilenumbruch beinhaltet ist dieser Text mit doppelten Anführungszeichen (`"`) zu umschließen.
