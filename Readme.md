@@ -69,22 +69,22 @@ Es ist zu beachten dass die Übertragung einige Zeit dauern kann, sei es aufgrun
 
 ### Felder
 
-| ​Englisch                         | ​Deutsch                              | Format          | ​Anmerkungen ​                                                                                                     |
+| ​Name                         | ​Beschreibung                              | Format          | ​Anmerkungen ​                                                                                                     |
 |----------------------------------|--------------------------------------|-----------------|------------------------------------------------------------------------------------------------------------------|
-| ​SenderID                         | ​SenderID                             | ​Ganzzahl        | ​wird vom HGV vergeben                                                                                            |
-| ​CompanyID        ​                | ​BetriebsID                           | ​anonymisiert    | ​die Betriebs-ID muss so behandelt werden, dass nur der   Steuerberater weiß, um welchen Betrieb es sich handelt. |
+| ​SenderID                         | ​Dient zur Identifikation des Partners                             | ​Ganzzahl        | ​wird vom HGV vergeben                                                                                            |
+| ​CompanyID        ​                | ​Dient zur Identifikation des Betriebes                           | ​anonymisiert    | ​die Betriebs-ID muss so behandelt werden, dass nur der   Steuerberater weiß, um welchen Betrieb es sich handelt. |
 | ​Year                             | ​Jahr                                 | ​####            | ​                                                                                                                 |
 | ​Month                            | ​Monat                                | ​1-12            | ​                                                                                                                 |
-| ​StandardBeds                     | ​AnzahlErwBetten                      | ​Ganzzahl        | ​                                                                                                                 |
-| ​ExtraBeds                        | ​AnzahlZusatzBetten                   | ​Ganzzahl        | ​                                                                                                                 |
-| ​AdultStays                       | ​NaechtErw                            | ​Ganzzahl        | ​                                                                                                                 |
-| ​ChildStays                       | ​NaechtKinder                         | ​Ganzzahl        | ​                                                                                                                 |
+| ​StandardBeds                     | ​Anzahl Erwachsenenbetten                      | ​Ganzzahl        | ​                                                                                                                 |
+| ​ExtraBeds                        | ​Anzahl Zusatzbetten                   | ​Ganzzahl        | ​                                                                                                                 |
+| ​AdultStays                       | ​Nächtigungen Erwachsene                            | ​Ganzzahl        | ​                                                                                                                 |
+| ​ChildStays                       | ​Nächtigungen Kinder                         | ​Ganzzahl        | ​                                                                                                                 |
 | ​BusinessDays                     | ​Offenhaltetage                       | ​Ganzzahl        | ​                                                                                                                 |
-| ​HotelBusinessDays                | ​OffenhaltetageHotel                  | ​Ganzzahl        | ​                                                                                                                 |
-| ​RestaurantBusinessDays           | ​OffenhaltetageRestaurant             | ​Ganzzahl        | ​                                                                                                                 |
-| ​RestaurantSeats                  | ​SitzplaetzeRest                      | ​Ganzzahl        | ​                                                                                                                 |
-| ​CampingSeats                     | ​SitzplaetzteCamping                  | ​Ganzzahl        | ​                                                                                                                 |
-| ​RentedPitches                    | ​VermieteteStellplaetzeCamping        | ​Ganzzahl        | ​                                                                                                                 |
+| ​HotelBusinessDays                | ​Offenhaltetage Hotel                  | ​Ganzzahl        | ​                                                                                                                 |
+| ​RestaurantBusinessDays           | ​Offenhaltetage Restaurant             | ​Ganzzahl        | ​                                                                                                                 |
+| ​RestaurantSeats                  | ​Sitzplaetze Restaurant                      | ​Ganzzahl        | ​                                                                                                                 |
+| ​CampingSeats                     | ​Sitzplaetzte Camping                  | ​Ganzzahl        | ​                                                                                                                 |
+| ​RentedPitches                    | ​Vermietete Stellplätze Camping        | ​Ganzzahl        | ​                                                                                                                 |
 | ​Employees                        | ​Mitarbeiter                          | ​Ganzzahl ​       | ​inklusive Familienmitglieder, die letzten beiden   Stellen definierten die 2 Nachkommastellen = Wert * 100       |
 | ​EmployedFamilyMembers            | ​mitarbeitende   Fam.mitgl.           | ​Ganzzahl        | ​die letzten beiden Stellen definierten die 2   Nachkommastellen = Wert des Kontos * 100​                          |
 
