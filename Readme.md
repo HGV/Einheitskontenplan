@@ -100,7 +100,7 @@ CompanyID;Year;Month;Beds;ExtraBeds
 
 ### Felder
 
-| Englisch ​    | ​Beschreibung       | ​Format          | ​Beschreibung                                                                                                                         |
+| Name ​    | ​Beschreibung       | ​Format          | ​Beschreibung                                                                                                                         |
 |--------------|---------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | ​SenderID     | ​Dient zur Identifikation des Partners      | ​Ganzzahl        | ​wird vom HGV vergeben​                                                                                                                |
 | ​CompanyID    | ​Dient zur Identifikation des Betriebes    | ​anonymisiert    | ​die ​Betriebs-ID muss so behandelt werden, dass nur   der Steuerberater weiß, um welchen Betrieb es sich handelt                      |
