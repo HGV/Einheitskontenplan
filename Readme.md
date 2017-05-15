@@ -15,13 +15,19 @@ Es gibt drei verschiedene Endpunkte der Datenübertragung:
 
 ### Pflege der Stammdaten
 
-Die Stammdaten werden über eine Weboberfläche gepflegt.
+Bei den Stammdaten handelt es sich um Angaben, welche für der Kategorisierung des Betriebes dienen.  
+Dies sind Angaben zum Betrieb, wie z.B. um was für eine Betriebsart (Schankbetrieb, Beherbergungsbetrieb, Bar, Mischbetrieb, ...) es sich handelt, ob vereinfachte Buchhaltungsform, ob im Eigentum, wieviele Sterne, welche Gemeinde und Tourismusverband.
+
+Die Stammdaten werden über eine Weboberfläche gepflegt.  
+Diese Weboberfläche wird vom HGV zur Verfügung gestellt. Pro Steuerberatungsbüro ist ein Login vorgesehen, wo sie ihre jeweiligen Kunden pflegen können.
 
 ### Pflege der Monatsdaten
 
+Unter Monatsdaten verstehen sich Angaben zu den Betten, Nächtigungen, Offenhaltetagen, Sitzplätze, Mitarbeiter.
+
 Die Monatsdaten werden über eine Weboberfläche gepflegt.
 
-Alternativ ist ein automatischer periodischer Import als CSV-Date möglich.
+Da sich diese Angaben (vor allem Nächtigungen und Offenhaltetage) laufend ändern ist alternativ ist ein automatischer periodischer Import als CSV-Date möglich um die manuelle Pflege so gering wie möglich zu halten.
 
 ### Pflege der Buchhaltungsdaten
 
