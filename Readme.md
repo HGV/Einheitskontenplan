@@ -102,8 +102,8 @@ CompanyID;Year;Month;Beds;ExtraBeds
 
 | Englisch ​    | ​Deutsch       | ​Format          | ​Beschreibung                                                                                                                         |
 |--------------|---------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| ​SenderID     | ​SenderID      | ​Ganzzahl        | ​wird vom HGV vergeben​                                                                                                                |
-| ​CompanyID    | ​BetriebsID    | ​anonymisiert    | ​die ​Betriebs-ID muss so behandelt werden, dass nur   der Steuerberater weiß, um welchen Betrieb es sich handelt                      |
+| ​SenderID     | ​Dient zur Identifikation des Partners      | ​Ganzzahl        | ​wird vom HGV vergeben​                                                                                                                |
+| ​CompanyID    | ​Dient zur Identifikation des Betriebes    | ​anonymisiert    | ​die ​Betriebs-ID muss so behandelt werden, dass nur   der Steuerberater weiß, um welchen Betrieb es sich handelt                      |
 | ​Year        ​ | ​Jahr          | ​####            | ​                                                                                                                                     |
 | ​Month        | ​Monat         | ​1-12            | ​                                                                                                                                     |
 | ​Account      | ​Konto         | ​Ganzzahl        | ​                                                                                                                                     |
