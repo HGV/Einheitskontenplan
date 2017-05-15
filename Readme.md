@@ -9,11 +9,11 @@ permalink: /
 
 Die Pflege des Einheitskontenplanes unterteilt sich in folgende drei Bereiche:
 
-1. Pflege der Stammdaten
-1. Pflege der Monatsdaten
-1. Übertragung der Buchhaltungsdaten (der eigentliche EKP)
+1. [Pflege der Stammdaten](#stammdaten)
+1. [Pflege der Monatsdaten](#monatsdaten)
+1. [Übertragung der Buchhaltungsdaten (der eigentliche EKP)](#ekp)
 
-### Pflege der Stammdaten
+### <a id="stammdaten">Pflege der Stammdaten</a>
 
 Bei den Stammdaten handelt es sich um Angaben, welche der Kategorisierung des Betriebes dienen.  
 Dies sind Angaben zum Betrieb, wie z.B. um was für eine Betriebsart (Schankbetrieb, Beherbergungsbetrieb, Bar, Mischbetrieb, ...) es sich handelt, ob vereinfachte Buchhaltungsform, ob im Eigentum, wieviele Sterne, welche Gemeinde und Tourismusverband...
@@ -21,7 +21,7 @@ Dies sind Angaben zum Betrieb, wie z.B. um was für eine Betriebsart (Schankbetr
 Die Stammdaten werden über eine Weboberfläche gepflegt.  
 Diese Weboberfläche wird vom HGV zur Verfügung gestellt. Pro Partner ist ein Login vorgesehen, wo ihre jeweiligen Kunden gepflegt werden können.
 
-### Pflege der Monatsdaten
+### <a id="monatsdaten">Pflege der Monatsdaten</a>
 
 Unter Monatsdaten verstehen sich Angaben zu den Betten, Nächtigungen, Offenhaltetagen, Sitzplätze, Mitarbeiter.
 
@@ -29,7 +29,7 @@ Die Monatsdaten werden über eine Weboberfläche gepflegt.
 
 Da sich diese Angaben (vor allem Nächtigungen und Offenhaltetage) laufend ändern ist alternativ ein automatischer periodischer Import als CSV-Datei möglich um die manuelle Pflege so gering wie möglich zu halten. Diese Schnittstelle wird im Detail weiter unten erklärt.
 
-### Pflege der Buchhaltungsdaten
+### <a id="ekp">Pflege der Buchhaltungsdaten</a>
 
 Die Daten werden im CSV-Format über die HGV-Schnittstelle übertragen. Diese Schnittstelle wird im Detail nachfolgend erklärt.
 
