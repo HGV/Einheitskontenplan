@@ -7,11 +7,11 @@ permalink: /
 
 ## Wie erfolgt die Datenpflege
 
-Der Einheitskontenplan unterteilt sich in folgende drei Bereiche:
+Die Pflege des Einheitskontenplanes unterteilt sich in folgende drei Bereiche:
 
-1. Stammdaten
-1. Monatsdaten
-1. Buchhaltungsdaten (der eigentliche EKP)
+1. Pflege der Stammdaten
+1. Pflege der Monatsdaten
+1. Übertragung der Buchhaltungsdaten (der eigentliche EKP)
 
 ### Pflege der Stammdaten
 
