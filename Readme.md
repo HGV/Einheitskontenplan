@@ -51,6 +51,10 @@ Nur vom HGV zertifizierte Partner dürfen die Daten an diese Webschnittstelle sc
 ### Servicebeschreibung
 
 Die CSV-Datei wird an den Endpunkt `/ekp` per `POST` geschickt.
+
+1. Für die Monatsdaten ist der Endpunkt: `/ekp/monthlyData`
+2. Für die Buchhaltungsdaten lautet der Endpunkt: `/ekp/accounting`
+
 Content-Type ist `text/csv`
 
 * Bei **erfolgreichem Import** gibt die Schnittstelle den HTTP-Status Code `201 Created` zurück.
