@@ -15,7 +15,7 @@ Die Pflege des Einheitskontenplanes unterteilt sich in folgende drei Bereiche:
 
 ### Pflege der Stammdaten
 
-Bei den Stammdaten handelt es sich um Angaben, welche für der Kategorisierung des Betriebes dienen.  
+Bei den Stammdaten handelt es sich um Angaben, welche der Kategorisierung des Betriebes dienen.  
 Dies sind Angaben zum Betrieb, wie z.B. um was für eine Betriebsart (Schankbetrieb, Beherbergungsbetrieb, Bar, Mischbetrieb, ...) es sich handelt, ob vereinfachte Buchhaltungsform, ob im Eigentum, wieviele Sterne, welche Gemeinde und Tourismusverband.
 
 Die Stammdaten werden über eine Weboberfläche gepflegt.  
