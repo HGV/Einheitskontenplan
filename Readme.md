@@ -16,10 +16,10 @@ Die Pflege des Einheitskontenplanes unterteilt sich in folgende drei Bereiche:
 ### Pflege der Stammdaten
 
 Bei den Stammdaten handelt es sich um Angaben, welche der Kategorisierung des Betriebes dienen.  
-Dies sind Angaben zum Betrieb, wie z.B. um was für eine Betriebsart (Schankbetrieb, Beherbergungsbetrieb, Bar, Mischbetrieb, ...) es sich handelt, ob vereinfachte Buchhaltungsform, ob im Eigentum, wieviele Sterne, welche Gemeinde und Tourismusverband.
+Dies sind Angaben zum Betrieb, wie z.B. um was für eine Betriebsart (Schankbetrieb, Beherbergungsbetrieb, Bar, Mischbetrieb, ...) es sich handelt, ob vereinfachte Buchhaltungsform, ob im Eigentum, wieviele Sterne, welche Gemeinde und Tourismusverband...
 
 Die Stammdaten werden über eine Weboberfläche gepflegt.  
-Diese Weboberfläche wird vom HGV zur Verfügung gestellt. Pro Steuerberatungsbüro ist ein Login vorgesehen, wo sie ihre jeweiligen Kunden pflegen können.
+Diese Weboberfläche wird vom HGV zur Verfügung gestellt. Pro Partner ist ein Login vorgesehen, wo ihre jeweiligen Kunden gepflegt werden können.
 
 ### Pflege der Monatsdaten
 
