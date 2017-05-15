@@ -58,8 +58,8 @@ Die CSV-Datei wird an den Endpunkt `/ekp` per HTTP-`POST` geschickt.
 Content-Type ist `text/csv`
 
 * Bei **erfolgreichem Import** gibt die Schnittstelle den HTTP-Status Code `201 Created` zurück.
-* Ist das **CSV-Format fehlerhaft** oder liegt ein sonstiger Fehler im übertragenen Dokument vor git die Schnittstelle den Status Code `400 Bad Request` zurück. Im Body steht die Ursache, wieso die Übertragung nicht erfolgreich war.
-* War der Import **aufgrund eines Fehlers beim HGV** nicht erfolgreich gibt die Schnittstelle den Status Code `500 Internal Server Error` zurück. Im Body steht die Fehlerursache.
+* Ist das **CSV-Format fehlerhaft** oder liegt ein sonstiger Fehler im übertragenen Dokument vor gibt die Schnittstelle den Status Code `400 Bad Request` zurück. Im Textkörper steht die Ursache, wieso die Übertragung nicht erfolgreich war.
+* War der Import **aufgrund eines Fehlers beim HGV** nicht erfolgreich gibt die Schnittstelle den Status Code `500 Internal Server Error` zurück. Im Textkörper steht die Fehlerursache.
 
 Es ist zu beachten dass die Übertragung einige Zeit dauern kann, sei es aufgrund dessen, dass die CSV-Datei sehr groß sein kann (bei Übertragung mehrerer Betriebe/Monate) oder aber der Import der Daten beim HGV länger dauert, da Sanitätschecks gemacht werden und die Daten mit bestehenden Daten zusammengeführt werden müssen.
 
