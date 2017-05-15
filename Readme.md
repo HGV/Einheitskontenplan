@@ -33,9 +33,11 @@ Da sich diese Angaben (vor allem Nächtigungen und Offenhaltetage) laufend ände
 
 Buchhaltungsdaten werden im [CSV-Format](https://de.wikipedia.org/wiki/CSV_%28Dateiformat%29) übertragen.   
 
-1. Das Trennzeichen ist ein Semikolon (`;`)
-1. Die Encodierung ist `UTF8`, damit Sonderzeichen korrekt übertragen werden.  
+1. Zur Zeichenkodierung wird `UTF-8` verwendet, damit Sonderzeichen korrekt übertragen werden.  
    Achtung! Diese Encodierung ist nicht das standardmäßig von Excel verwendete Format, ist jedoch das im Web gängigere und portablere Format.
+1. Zeilenumbrüche werden mittels `CRLF` angegeben.
+1. Das Trennzeichen ist ein Semikolon (`;`)
+1. Falls die Spalte ein Semikolon beinhaltet ist diese Spalte mit doppelten Anführungszeichen (`"`) zu versehen.
 
 ## Definition der Monatsdaten
 
