@@ -7,7 +7,7 @@ permalink: /
 
 ## Wie erfolgt die Datenpflege
 
-Die Pflege des Einheitskontenplanes unterteilt sich in folgende drei Bereiche:
+Die Pflege des HGV-Benchmarks unterteilt sich in folgende drei Bereiche:
 
 1. [Pflege der Stammdaten](#pflege-der-stammdaten)
 1. [Pflege der Monatsdaten](#pflege-der-monatsdaten)
