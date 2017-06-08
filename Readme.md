@@ -29,7 +29,7 @@ Die Monatsdaten werden über eine Weboberfläche gepflegt.
 
 ### Pflege der Buchhaltungsdaten
 
-Die Daten werden im CSV-Format über die [HGV-Schnittstelle](#schnittstelle-zum-hgv) übertragen.
+Die Daten werden im [CSV-Format](#definition-der-buchhaltungsdaten) über die [HGV-Schnittstelle](#schnittstelle-zum-hgv) übertragen.
 
 -----------------------------------
 
