@@ -1,9 +1,9 @@
 ---
-title: HGV-Schnittstelle für den Einheitskontenplan (EKP)
+title: HGV-Benchmark
 permalink: /
 ---
 
-#  HGV-Schnittstelle für den Einheitskontenplan (EKP)
+#  HGV-Benchmark
 
 ## Wie erfolgt die Datenpflege
 
@@ -11,7 +11,7 @@ Die Pflege des Einheitskontenplanes unterteilt sich in folgende drei Bereiche:
 
 1. [Pflege der Stammdaten](#pflege-der-stammdaten)
 1. [Pflege der Monatsdaten](#pflege-der-monatsdaten)
-1. [Pflege der Buchhaltungsdaten (der eigentliche EKP)](#pflege-der-buchhaltungsdaten)
+1. [Pflege der Buchhaltungsdaten (EKP)](#pflege-der-buchhaltungsdaten)
 
 ### Pflege der Stammdaten
 
@@ -27,8 +27,6 @@ Unter Monatsdaten verstehen sich Angaben zu den Betten, Nächtigungen, Offenhalt
 
 Die Monatsdaten werden über eine Weboberfläche gepflegt.
 
-Da sich diese Angaben (vor allem Nächtigungen und Offenhaltetage) laufend ändern ist alternativ ein automatischer periodischer Import als CSV-Datei über die [HGV-Schnittstelle](#schnittstelle-zum-hgv) möglich um die manuelle Pflege so gering wie möglich zu halten.
-
 ### Pflege der Buchhaltungsdaten
 
 Die Daten werden im CSV-Format über die [HGV-Schnittstelle](#schnittstelle-zum-hgv) übertragen.
@@ -36,7 +34,7 @@ Die Daten werden im CSV-Format über die [HGV-Schnittstelle](#schnittstelle-zum-
 ## Schnittstelle zum HGV
 
 Der Datenupload der CSV-Dateien erfolgt über eine gesicherte `HTTPS`-Webschnittstelle.  
-Dia Authentisierung erfolgt über [Basic-Authentication](https://de.wikipedia.org/wiki/HTTP-Authentifizierung#Basic_Authentication).  
+Die Authentisierung erfolgt über [Basic-Authentication](https://de.wikipedia.org/wiki/HTTP-Authentifizierung#Basic_Authentication).  
 Nur vom HGV zertifizierte Partner dürfen die Daten an diese Webschnittstelle schicken.
 
 #### Daten welche über die Schnittstelle gepflegt werden, werden im [CSV-Format](https://de.wikipedia.org/wiki/CSV_%28Dateiformat%29) übertragen.
@@ -63,49 +61,15 @@ Content-Type ist `text/csv`
 
 Es ist zu beachten dass die Übertragung einige Zeit dauern kann, sei es aufgrund dessen, dass die CSV-Datei sehr groß sein kann (bei Übertragung mehrerer Betriebe/Monate) oder aber der Import der Daten beim HGV länger dauert, da Sanitätschecks gemacht werden und die Daten mit bestehenden Daten zusammengeführt werden müssen.
 
-> Eine Überlegung ist eine alternative Schnittstelle zu schaffen, bei welcher die Daten vom HGV abgeholt werden (FTP, SCP, HTTP). Bei erfolgreichem Import werden die Daten anschließend gelöscht.
-
-## Definition der Monatsdaten
-
-### Felder
-
-| ​Name                         | ​Beschreibung                              | Format          | ​Anmerkungen ​                                                                                                     |
-|----------------------------------|--------------------------------------|-----------------|------------------------------------------------------------------------------------------------------------------|
-| ​SenderID                         | ​Dient zur Identifikation des Partners                             | ​Ganzzahl        | ​wird vom HGV vergeben                                                                                            |
-| ​CompanyID        ​                | ​Dient zur Identifikation des Betriebes                           | ​anonymisiert    | ​die Betriebs-ID muss so behandelt werden, dass nur der   Steuerberater weiß, um welchen Betrieb es sich handelt. |
-| ​Year                             | ​Jahr                                 | ​####            | ​                                                                                                                 |
-| ​Month                            | ​Monat                                | ​1-12            | ​                                                                                                                 |
-| ​StandardBeds                     | ​Anzahl Erwachsenenbetten                      | ​Ganzzahl        | ​                                                                                                                 |
-| ​ExtraBeds                        | ​Anzahl Zusatzbetten                   | ​Ganzzahl        | ​                                                                                                                 |
-| ​AdultStays                       | ​Nächtigungen Erwachsene                            | ​Ganzzahl        | ​                                                                                                                 |
-| ​ChildStays                       | ​Nächtigungen Kinder                         | ​Ganzzahl        | ​                                                                                                                 |
-| ​BusinessDays                     | ​Offenhaltetage                       | ​Ganzzahl        | ​                                                                                                                 |
-| ​HotelBusinessDays                | ​Offenhaltetage Hotel                  | ​Ganzzahl        | ​                                                                                                                 |
-| ​RestaurantBusinessDays           | ​Offenhaltetage Restaurant             | ​Ganzzahl        | ​                                                                                                                 |
-| ​RestaurantSeats                  | ​Sitzplaetze Restaurant                      | ​Ganzzahl        | ​                                                                                                                 |
-| ​CampingSeats                     | ​Sitzplaetzte Camping                  | ​Ganzzahl        | ​                                                                                                                 |
-| ​RentedPitches                    | ​Vermietete Stellplätze Camping        | ​Ganzzahl        | ​                                                                                                                 |
-| ​Employees                        | ​Mitarbeiter                          | ​Ganzzahl ​       | ​inklusive Familienmitglieder, die letzten beiden   Stellen definierten die 2 Nachkommastellen = Wert * 100       |
-| ​EmployedFamilyMembers            | ​mitarbeitende   Fam.mitgl.           | ​Ganzzahl        | ​die letzten beiden Stellen definierten die 2   Nachkommastellen = Wert des Kontos * 100​                          |
-
-### Beispiel
-
-```csv
-CompanyID;Year;Month;Beds;ExtraBeds
-1;2016;1;32;1
-1;2016;2;32;3​
-```
-
 ## Definition der Buchhaltungsdaten
 
 ### Felder
 
 | Name ​    | ​Beschreibung       | ​Format          | ​Beschreibung                                                                                                                         |
 |--------------|---------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| ​SenderID     | ​Dient zur Identifikation des Partners      | ​Ganzzahl        | ​wird vom HGV vergeben​                                                                                                                |
-| ​CompanyID    | ​Dient zur Identifikation des Betriebes    | ​anonymisiert    | ​die ​Betriebs-ID muss so behandelt werden, dass nur   der Steuerberater weiß, um welchen Betrieb es sich handelt                      |
-| ​Year        ​ | ​Jahr          | ​####            | ​                                                                                                                                     |
-| ​Month        | ​Monat         | ​1-12            | ​                                                                                                                                     |
+| ​CompanyID    | ​Dient zur Identifikation des Betriebes    | Text    | ​die ​Betriebs-ID muss so behandelt werden, dass nur   der Steuerberater weiß, um welchen Betrieb es sich handelt                      |
+| ​Year        ​ | ​Jahr          | ​Ganzzahl         | ​4-stellig                                                                                                                                     |
+| ​Month        | ​Monat         | Ganzzahl             | ​​1-12                                                                                                                                     |
 | ​Account      | ​Konto         | ​Ganzzahl        | ​                                                                                                                                     |
 | ​Value        | ​Wert         ​ | ​Ganzzahl        | ​die letzten beiden Stellen die 2 Nachkommastellen   definieren = Wert des Kontos* 100, falls negativ dann mit negativem   Vorzeichen​ |
 
@@ -117,8 +81,3 @@ SenderID;CompanyID;Year;Month;Account;Value
 1;1;2016;1;61102;1320000
 1;2;2016;1;61101;220000
 ```
-
-
-
-
-
