@@ -54,7 +54,6 @@ SenderID;CompanyID;Year;Month;Account;Value
 1;2;2016;1;61101;220000
 ```
 
-
 -----------------------------------
 
 ## Schnittstelle zum HGV
