@@ -31,11 +31,13 @@ Die Monatsdaten werden über eine Weboberfläche gepflegt.
 
 Die Daten werden im CSV-Format über die [HGV-Schnittstelle](#schnittstelle-zum-hgv) übertragen.
 
+-----------------------------------
+
 ## Schnittstelle zum HGV
 
 Der Datenupload der CSV-Dateien erfolgt über eine gesicherte `HTTPS`-Webschnittstelle.  
 Die Authentisierung erfolgt über [Basic-Authentication](https://de.wikipedia.org/wiki/HTTP-Authentifizierung#Basic_Authentication).  
-Nur vom HGV zertifizierte Partner dürfen die Daten an diese Webschnittstelle schicken.
+Nur vom HGV zertifizierte Partner dürfen Daten an diese Webschnittstelle schicken.
 
 #### Daten welche über die Schnittstelle gepflegt werden, werden im [CSV-Format](https://de.wikipedia.org/wiki/CSV_%28Dateiformat%29) übertragen.
 
