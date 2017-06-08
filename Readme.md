@@ -63,6 +63,8 @@ Content-Type ist `text/csv`
 
 Es ist zu beachten dass die Übertragung einige Zeit dauern kann, sei es aufgrund dessen, dass die CSV-Datei sehr groß sein kann (bei Übertragung mehrerer Betriebe/Monate) oder aber der Import der Daten beim HGV länger dauert, da Sanitätschecks gemacht werden und die Daten mit bestehenden Daten zusammengeführt werden müssen.
 
+-----------------------------------
+
 ## Definition der Buchhaltungsdaten
 
 ### Felder
