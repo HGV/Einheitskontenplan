@@ -33,6 +33,29 @@ Die Daten werden im CSV-Format über die [HGV-Schnittstelle](#schnittstelle-zum-
 
 -----------------------------------
 
+## Definition der Buchhaltungsdaten
+
+### Felder
+
+| Name ​    | ​Beschreibung       | ​Format          | ​Beschreibung                                                                                                                         |
+|--------------|---------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| ​CompanyID    | ​Dient zur Identifikation des Betriebes    | Text    | ​die ​Betriebs-ID muss so behandelt werden, dass nur   der Steuerberater weiß, um welchen Betrieb es sich handelt                      |
+| ​Year        ​ | ​Jahr          | ​Ganzzahl         | ​4-stellig                                                                                                                                     |
+| ​Month        | ​Monat         | Ganzzahl             | ​​1-12                                                                                                                                     |
+| ​Account      | ​Konto         | ​Ganzzahl        | ​                                                                                                                                     |
+| ​Value        | ​Wert         ​ | ​Ganzzahl        | ​die letzten beiden Stellen die 2 Nachkommastellen   definieren = Wert des Kontos* 100, falls negativ dann mit negativem   Vorzeichen​ |
+
+### Beispiel
+
+```csv
+SenderID;CompanyID;Year;Month;Account;Value
+1;1;2016;1;61101;3210000
+1;1;2016;1;61102;1320000
+1;2;2016;1;61101;220000
+```
+
+-----------------------------------
+
 ## Schnittstelle zum HGV
 
 Der Datenupload der CSV-Dateien erfolgt über eine gesicherte `HTTPS`-Webschnittstelle.  
@@ -63,25 +86,3 @@ Content-Type ist `text/csv`
 
 Es ist zu beachten dass die Übertragung einige Zeit dauern kann, sei es aufgrund dessen, dass die CSV-Datei sehr groß sein kann (bei Übertragung mehrerer Betriebe/Monate) oder aber der Import der Daten beim HGV länger dauert, da Sanitätschecks gemacht werden und die Daten mit bestehenden Daten zusammengeführt werden müssen.
 
------------------------------------
-
-## Definition der Buchhaltungsdaten
-
-### Felder
-
-| Name ​    | ​Beschreibung       | ​Format          | ​Beschreibung                                                                                                                         |
-|--------------|---------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| ​CompanyID    | ​Dient zur Identifikation des Betriebes    | Text    | ​die ​Betriebs-ID muss so behandelt werden, dass nur   der Steuerberater weiß, um welchen Betrieb es sich handelt                      |
-| ​Year        ​ | ​Jahr          | ​Ganzzahl         | ​4-stellig                                                                                                                                     |
-| ​Month        | ​Monat         | Ganzzahl             | ​​1-12                                                                                                                                     |
-| ​Account      | ​Konto         | ​Ganzzahl        | ​                                                                                                                                     |
-| ​Value        | ​Wert         ​ | ​Ganzzahl        | ​die letzten beiden Stellen die 2 Nachkommastellen   definieren = Wert des Kontos* 100, falls negativ dann mit negativem   Vorzeichen​ |
-
-### Beispiel
-
-```csv
-SenderID;CompanyID;Year;Month;Account;Value
-1;1;2016;1;61101;3210000
-1;1;2016;1;61102;1320000
-1;2;2016;1;61101;220000
-```
