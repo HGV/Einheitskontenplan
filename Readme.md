@@ -71,4 +71,4 @@ Nur vom HGV zertifizierte Partner dürfen Daten an diese Webschnittstelle schick
 1. Falls der Text einer Spalte ein Semikolon oder einen Zeilenumbruch beinhaltet, ist dieser Text mit doppelten Anführungszeichen (`"`) zu umschließen.
 1. Falls der Text einer Spalte ein Anführungszeichen (ausgenommen sind die beiden umschließenden Anführungszeichen) beinhaltet, ist diesem Anführungszeichen ein "Backslash" `\` voranzustellen.
 
-Ein Fortschrittsbalken informiert über den Fortschritt der Übertragung. Im Fehlerfall wird dem Benutzer eine Fehlermeldung mit dem Grund der nicht erfolgreichen Übertragung angezeigt.
+Ein Fortschrittsbalken informiert über den Fortschritt der Übertragung. Im Fehlerfall wird dem Benutzer eine Fehlermeldung mit der Begründung angezeigt, wieso die Übertragung nicht erfolgreich war.
