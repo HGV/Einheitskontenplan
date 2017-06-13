@@ -58,9 +58,7 @@ CompanyID;Year;Month;Account;Value
 
 ## Datei-Upload
 
-Der Datenupload der CSV-Dateien erfolgt über eine gesicherte `HTTPS`-Webschnittstelle.  
-Die Authentisierung erfolgt über [Basic-Authentication](https://de.wikipedia.org/wiki/HTTP-Authentifizierung#Basic_Authentication).  
-Nur vom HGV zertifizierte Partner dürfen Daten an diese Webschnittstelle schicken.
+Der Datenupload der CSV-Dateien erfolgt über eine gesicherte `HTTPS`-Webseite.  
 
 #### Daten welche über den Upload gepflegt werden, werden im [CSV-Format](https://de.wikipedia.org/wiki/CSV_%28Dateiformat%29) übertragen.
 
@@ -71,4 +69,4 @@ Nur vom HGV zertifizierte Partner dürfen Daten an diese Webschnittstelle schick
 1. Falls der Text einer Spalte ein Semikolon oder einen Zeilenumbruch beinhaltet, ist dieser Text mit doppelten Anführungszeichen (`"`) zu umschließen.
 1. Falls der Text einer Spalte ein Anführungszeichen (ausgenommen sind die beiden umschließenden Anführungszeichen) beinhaltet, ist diesem Anführungszeichen ein "Backslash" `\` voranzustellen.
 
-Ein Fortschrittsbalken informiert über den Fortschritt der Übertragung. Im Fehlerfall wird dem Benutzer eine Fehlermeldung mit der Begründung angezeigt, wieso die Übertragung nicht erfolgreich war.
+Ein Fortschrittsbalken informiert über den Fortschritt der Dateiübertragung. Im Fehlerfall wird dem Benutzer eine Fehlermeldung mit der Begründung angezeigt, wieso die Dateiübertragung nicht erfolgreich war.
